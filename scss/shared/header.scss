@@ -1,0 +1,95 @@
+$header-height: 100px;
+.header {
+  height: $header-height;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+}
+
+.logo-text {
+  flex: 1;
+  font-size: 1.5em;
+  font-weight: $fw700;
+  cursor: pointer;
+  user-select: none;
+}
+
+.navigation {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  top: 100px;
+  left: 0;
+  margin-top: 30px;
+  z-index: 99;
+
+  @include mq('desktop') {
+    opacity: 1;
+    position: static;
+    margin-top: 0;
+  }
+
+  .navigation-list {
+    .navigation-item {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      @include mq('desktop') {
+        flex-direction: row;
+        justify-content: flex-end;
+        margin-right: 50px;
+      }
+
+      .navigation-link {
+        color: inherit;
+        height: $finger-size;
+        display: inline-flex;
+        align-items: center;
+        font-size: 1.875em;
+        transition: 0.2s;
+
+        &:hover {
+          transition: 0.15s;
+          color: $color-sunshade;
+        }
+
+        @include mq('desktop') {
+          font-size: 1em;
+          font-weight: $fw500;
+        }
+
+        &:not(:last-child) {
+          margin-bottom: 30px;
+
+          @include mq('desktop') {
+            margin-bottom: 0;
+            margin-right: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.icon-search {
+  @include mq('desktop') {
+    margin-right: 20px;
+  }
+}
+.icon-menu-switch {
+  @include mq('desktop') {
+    display: none;
+  }
+}
+
+.menu-show {
+  opacity: 1;
+  pointer-events: auto;
+  transition: 0.15s;
+  height: 100vh;
+  min-width: 375px;
+  background-color: $color-ebony-clay;
+}

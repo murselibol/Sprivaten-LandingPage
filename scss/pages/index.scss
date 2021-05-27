@@ -1,0 +1,596 @@
+/******************  HEADER.SCSS ===>  ********************/
+.hero {
+  background: url(./assets/img/header-bg.svg) no-repeat center / cover;
+
+  &-color-ebony {
+    background: $color-ebony-clay;
+  }
+
+  @include mq('desktop') {
+    height: 770px;
+  }
+}
+
+/******************  HERO SECTION  ********************/
+.hero-section {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+  padding-bottom: 100px;
+
+  @include mq('desktop') {
+    flex-direction: row;
+    padding-bottom: 50px;
+  }
+
+  // WRAPPER-LEFT
+  .wrapper-left {
+    text-align: center;
+    margin-bottom: 100px;
+
+    @include mq('desktop') {
+      margin-bottom: 0;
+      text-align: left;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-right: 50px;
+    }
+
+    .title {
+      width: 300px;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 2.5em;
+      line-height: 57px;
+      font-weight: $fw700;
+      margin-bottom: 35px;
+
+      @include mq('desktop') {
+        width: 100%;
+        font-size: 3.375em;
+        line-height: 80px;
+      }
+    }
+
+    .explanation {
+      width: 280px;
+      display: inline-block;
+      font-size: 1.25em;
+      line-height: 30px;
+      font-weight: $fw500;
+      margin-bottom: 35px;
+
+      &::after {
+        content: ' just do not act that way.';
+      }
+
+      @include mq('desktop') {
+        max-width: 376px;
+
+        &::after {
+          content: '.';
+        }
+      }
+    }
+
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      @include mq('desktop') {
+        flex-direction: row;
+      }
+
+      .button {
+        &:not(:last-child) {
+          margin-bottom: 25px;
+
+          @include mq('desktop') {
+            margin-bottom: 0;
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  // WRAPPER-RIGHT
+  .wrapper-right {
+    @include mq('desktop') {
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .book-appointment-card {
+      background-color: white;
+      border-radius: 10px;
+      padding: 30px;
+      width: 100%;
+      color: $color-ebony-clay;
+
+      @include mq('desktop') {
+        padding: 40px;
+        width: 330px;
+      }
+
+      .card-title {
+        text-align: center;
+        font-weight: $fw700;
+        font-size: 1.5em;
+        margin-bottom: 40px;
+      }
+
+      .card-body {
+        font-weight: $fw500;
+
+        .card-item {
+          margin-bottom: 12px;
+
+          &:nth-last-child(2) {
+            margin-bottom: 40px;
+          }
+
+          label {
+            display: block;
+            margin-bottom: 10px;
+          }
+
+          input {
+            padding: 10px 20px;
+            width: 100%;
+            font-weight: $fw500;
+          }
+
+          select {
+            padding: 10px 20px;
+            width: 100%;
+          }
+          button {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+/******************  CHOOSE  ********************/
+.choose {
+  background-color: $color-ebony-clay;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  color: white;
+  text-align: center;
+
+  .title {
+    width: 252px;
+    font-size: 2.5em;
+    font-weight: $fw700;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+
+    @include mq('desktop') {
+      width: 100%;
+    }
+  }
+  .explanation {
+    width: 218px;
+    font-size: 0.875em;
+    line-height: 20px;
+    display: inline-block;
+    margin-bottom: 75px;
+
+    @include mq('desktop') {
+      width: 470px;
+    }
+  }
+  .cards-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include mq('desktop') {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  .card {
+    max-width: 328px;
+    border-radius: 10px;
+    background-color: white;
+    &:not(:last-child) {
+      margin-bottom: 50px;
+    }
+
+    @include mq('desktop') {
+      margin-bottom: 0;
+      &:not(:last-child) {
+        margin-bottom: 0;
+        margin-right: 30px;
+      }
+    }
+
+    .card-header {
+      border-radius: 10px;
+      padding: 30px;
+      display: flex;
+      align-items: center;
+      background-color: $color-patents-blue;
+
+      .card-img {
+        background-color: white;
+        border-radius: 100%;
+      }
+
+      .card-title {
+        color: $color-ebony-clay;
+        margin-left: 10px;
+      }
+    }
+    .card-body {
+      padding: 30px 50px;
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+
+      .card-body-item {
+        font-size: 0.875em;
+        font-weight: $fw500;
+        color: $color-dove-gray;
+        margin-bottom: 10px;
+      }
+      .card-body-footer {
+        color: $color-pacific-blue;
+        font-weight: $fw500;
+      }
+    }
+  }
+}
+
+/******************  BUSINESS-SERVİCE  ********************/
+.business-service {
+  background-color: $color-ebony-clay;
+  padding-top: 80px;
+  color: white;
+  text-align: center;
+
+  .wrapper {
+    padding-bottom: 150px;
+
+    @include mq('desktop') {
+      padding-bottom: 180;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+  .title {
+    width: 310px;
+    font-size: 2.5em;
+    font-weight: $fw700;
+    letter-spacing: 0.2px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+
+    &::before {
+      content: 'We take care customers our all expert here.';
+    }
+
+    @include mq('desktop') {
+      width: 480px;
+
+      &::before {
+        content: '';
+      }
+      &::after {
+        content: 'We are providing best business service.';
+      }
+    }
+  }
+  .explanation {
+    width: 220px;
+    display: inline-block;
+    font-size: 0.875em;
+    line-height: 20px;
+
+    @include mq('desktop') {
+      width: 470px;
+      margin-bottom: 0;
+    }
+  }
+  .video {
+    background-color: $color-bottle-green;
+    height: 445px;
+    position: relative;
+
+    .video-inner {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: -100px;
+      margin-left: auto;
+      margin-right: auto;
+
+      @include mq('desktop') {
+        video {
+          background: url('assets/img/video-bg-big.svg');
+          width: 870px;
+          height: 445px;
+        }
+      }
+    }
+  }
+}
+
+/******************  WHAT CLIENT SAY  ********************/
+.what-clients-say {
+  background-color: $color-ebony-clay;
+  padding-top: 75px;
+  padding-bottom: 80px;
+  color: white;
+  text-align: center;
+
+  .title {
+    font-size: 2.5em;
+    font-weight: $fw700;
+    letter-spacing: 0.2px;
+    margin-bottom: 10px;
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+    @include mq('desktop') {
+      width: 400px;
+    }
+  }
+  .explanation {
+    width: 218px;
+    font-size: 0.875em;
+    line-height: 20px;
+    display: inline-block;
+    margin-bottom: 75px;
+
+    @include mq('desktop') {
+      width: 440px;
+    }
+  }
+
+  .cards-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include mq('desktop') {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .card {
+      max-width: 330px;
+      background-color: white;
+      padding: 30px 35px;
+      border-radius: 5px;
+      font-size: 0.875em;
+      text-align: left;
+      font-weight: $fw500;
+
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+
+      @include mq('desktop') {
+        width: 440px;
+
+        &:not(:last-child) {
+          margin-bottom: 0;
+          margin-right: 30px;
+        }
+      }
+
+      .card-header {
+        margin-bottom: 20px;
+
+        .icon-star-yellow {
+          width: 20px;
+          height: 20px;
+          fill: $color-supernova;
+          &-idle {
+            fill: #ccc;
+          }
+        }
+      }
+
+      .card-body-text {
+        color: $color-dove-gray;
+        line-height: 24px;
+        margin-bottom: 20px;
+      }
+      .card-footer {
+        display: flex;
+        align-items: center;
+
+        .person {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          margin-left: 10px;
+          .person-name {
+            color: $color-sunshade;
+            margin-bottom: 8px;
+            font-weight: $fw700;
+          }
+          .person-job {
+            text-align: left;
+            color: $color-ebony-clay;
+          }
+        }
+      }
+    }
+  }
+}
+
+/******************  OUR TEAM  ********************/
+.our-team {
+  background-color: $color-ebony-clay;
+  padding-top: 75px;
+  padding-bottom: 120px;
+  color: white;
+  text-align: center;
+
+  .title {
+    width: 250px;
+    font-size: 2.5em;
+    font-weight: $fw700;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+
+    @include mq('desktop') {
+      width: 400px;
+    }
+  }
+
+  .explanation {
+    width: 218px;
+    font-size: 0.875em;
+    line-height: 20px;
+    display: inline-block;
+    margin-bottom: 75px;
+
+    @include mq('desktop') {
+      width: 440px;
+    }
+  }
+
+  .cards-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include mq('desktop') {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .card {
+      max-width: 328px;
+      background-color: white;
+      padding-bottom: 30px;
+
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+
+      @include mq('desktop') {
+        &:not(:last-child) {
+          margin-bottom: 0;
+          margin-right: 30px;
+        }
+      }
+
+      .person-photo {
+        margin-bottom: 30px;
+        picture {
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+
+      .person-name {
+        color: $color-ebony-clay;
+        font-weight: $fw700;
+        margin-bottom: 5px;
+      }
+
+      .job-description {
+        color: $color-dove-gray;
+        font-weight: $fw500;
+        display: inline-block;
+        margin-bottom: 5px;
+      }
+
+      .social-icons {
+        display: flex;
+        justify-content: center;
+
+        .icon-facebook,
+        .icon-instagram,
+        .icon-twitter {
+          fill: $color-pacific-blue;
+        }
+      }
+    }
+  }
+}
+
+/******************  CONTACT US  ********************/
+.contact-us {
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  .wrapper {
+    @include mq('desktop') {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  .wrapper-text {
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    width: 100%;
+
+    @include mq('desktop') {
+      margin-bottom: 0;
+    }
+
+    .title {
+      font-size: 1.5em;
+      font-weight: $fw700;
+      margin-bottom: 10px;
+
+      @include mq('desktop') {
+        width: 100%;
+      }
+    }
+
+    .explanation {
+      display: inline-block;
+      width: 180px;
+      font-size: 0.875em;
+      font-weight: $fw500;
+
+      @include mq('desktop') {
+        width: 100%;
+      }
+    }
+  }
+  .button-contact-us {
+    width: 100%;
+
+    @include mq('desktop') {
+      width: 190px;
+    }
+  }
+}
+
+/******************  FOOTER.SCSS  ********************/

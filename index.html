@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet" />
+    <title>Sprivaten</title>
+
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <svg style="position: absolute; width: 0; height: 0; overflow: hidden" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <defs>
+        <symbol id="icon-search" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17.1901 15.4783L23.6458 21.934C23.8727 22.161 24.0001 22.4689 24 22.7899C23.9999 23.111 23.8723 23.4188 23.6452 23.6457C23.4181 23.8726 23.1102 24 22.7892 23.9999C22.4682 23.9998 22.1604 23.8722 21.9335 23.6451L15.4778 17.1894C13.5479 18.6841 11.1211 19.3875 8.69104 19.1565C6.26097 18.9255 4.01018 17.7774 2.39656 15.9458C0.782936 14.1142 -0.0723147 11.7366 0.00479537 9.29681C0.0819054 6.857 1.08558 4.5382 2.81165 2.81214C4.53771 1.08607 6.85651 0.0823937 9.29632 0.00528365C11.7361 -0.0718264 14.1137 0.783424 15.9453 2.39705C17.7769 4.01067 18.925 6.26146 19.156 8.69153C19.387 11.1216 18.6836 13.5484 17.1889 15.4783H17.1901ZM9.60045 16.7994C11.5099 16.7994 13.3412 16.0409 14.6914 14.6907C16.0416 13.3405 16.8001 11.5092 16.8001 9.59974C16.8001 7.69027 16.0416 5.859 14.6914 4.5088C13.3412 3.1586 11.5099 2.40007 9.60045 2.40007C7.69098 2.40007 5.85971 3.1586 4.50951 4.5088C3.15932 5.859 2.40078 7.69027 2.40078 9.59974C2.40078 11.5092 3.15932 13.3405 4.50951 14.6907C5.85971 16.0409 7.69098 16.7994 9.60045 16.7994Z" />
+          </symbol>
+          
+        <symbol id="icon-shoppingcard" width="24" height="24" viewBox="0 0 24 24" ">
+          <g clip-path="url(#clip0)">
+            <path d="M8.00039 22.4002C8.88405 22.4002 9.60039 21.6839 9.60039 20.8002C9.60039 19.9165 8.88405 19.2002 8.00039 19.2002C7.11674 19.2002 6.40039 19.9165 6.40039 20.8002C6.40039 21.6839 7.11674 22.4002 8.00039 22.4002Z" />
+            <path d="M19.1996 22.4002C20.0833 22.4002 20.7996 21.6839 20.7996 20.8002C20.7996 19.9165 20.0833 19.2002 19.1996 19.2002C18.316 19.2002 17.5996 19.9165 17.5996 20.8002C17.5996 21.6839 18.316 22.4002 19.1996 22.4002Z" />
+            <path
+              d="M22.4 4.00016H4.656L4 0.640163C3.9626 0.456742 3.86206 0.292245 3.71589 0.175305C3.56971 0.0583653 3.38716 -0.00361159 3.2 0.000162751H0V1.60016H2.544L5.6 16.9602C5.6374 17.1436 5.73794 17.3081 5.88411 17.425C6.03029 17.542 6.21284 17.6039 6.4 17.6002H20.8V16.0002H7.056L6.4 12.8002H20.8C20.9849 12.8047 21.1657 12.745 21.3116 12.6312C21.4574 12.5174 21.5594 12.3566 21.6 12.1762L23.2 4.97616C23.2268 4.85746 23.2262 4.73421 23.1982 4.61579C23.1702 4.49737 23.1155 4.38689 23.0384 4.29278C22.9612 4.19867 22.8636 4.12339 22.753 4.07268C22.6424 4.02198 22.5217 3.99717 22.4 4.00016ZM20.16 11.2002H6.096L4.976 5.60016H21.4L20.16 11.2002Z"
+            />
+          </g>
+          <defs>
+            <clipPath id="clip0">
+              <rect width="24" height="22.4002" />
+            </clipPath>
+          </defs>
+        </symbol>
+        <symbol id="icon-menu" width="24" height="24" viewBox="0 0 24 14" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0.572266 0H23.4294V2.28571H0.572266V0ZM6.28655 5.71429H23.4294V8H6.28655V5.71429ZM13.4294 11.4286H23.4294V13.7143H13.4294V11.4286Z" />
+        </symbol>
+        <symbol id="icon-star">
+          <path d="M18.673 7.41256C18.6154 7.24274 18.5093 7.09353 18.3678 6.98335C18.2263 6.87316 18.0556 6.80681 17.8769 6.79251L12.6477 6.377L10.3849 1.36798C10.3129 1.20665 10.1956 1.06963 10.0474 0.973442C9.8992 0.877257 9.72631 0.826025 9.54962 0.825928C9.37292 0.825831 9.19998 0.876874 9.05165 0.972896C8.90333 1.06892 8.78596 1.20582 8.71372 1.36707L6.4509 6.377L1.22175 6.79251C1.04606 6.80642 0.878097 6.87066 0.737959 6.97754C0.597821 7.08442 0.491442 7.2294 0.431546 7.39516C0.371651 7.56091 0.360777 7.74041 0.400224 7.91218C0.439672 8.08395 0.527771 8.24072 0.653982 8.36373L4.51829 12.1308L3.15161 18.0488C3.11011 18.2279 3.12341 18.4154 3.18979 18.5869C3.25616 18.7584 3.37254 18.9059 3.52383 19.0105C3.67511 19.115 3.85432 19.1716 4.03819 19.173C4.22207 19.1744 4.40212 19.1205 4.55498 19.0183L9.54932 15.6888L14.5437 19.0183C14.6999 19.1221 14.8842 19.1755 15.0716 19.1713C15.2591 19.1672 15.4409 19.1058 15.5924 18.9953C15.744 18.8848 15.858 18.7306 15.9193 18.5533C15.9806 18.3761 15.9861 18.1843 15.9351 18.0039L14.2575 12.1336L18.4181 8.38941C18.6905 8.14359 18.7905 7.76019 18.673 7.41256Z"/>
+        </symbol>
+
+        <symbol id="icon-facebook" >
+          <path d="M23.04 0H0.96C0.429 0 0 0.429 0 0.96V23.04C0 23.571 0.429 24 0.96 24H23.04C23.571 24 24 23.571 24 23.04V0.96C24 0.429 23.571 0 23.04 0ZM20.268 7.005H18.351C16.848 7.005 16.557 7.719 16.557 8.769V11.082H20.145L19.677 14.703H16.557V24H12.816V14.706H9.687V11.082H12.816V8.412C12.816 5.313 14.709 3.624 17.475 3.624C18.801 3.624 19.938 3.723 20.271 3.768V7.005H20.268Z"/>
+        </symbol>
+        <symbol id="icon-instagram" >
+          <path d="M12.0026 5.84744C8.59756 5.84744 5.84956 8.59544 5.84956 12.0004C5.84956 15.4054 8.59756 18.1534 12.0026 18.1534C15.4076 18.1534 18.1556 15.4054 18.1556 12.0004C18.1556 8.59544 15.4076 5.84744 12.0026 5.84744ZM12.0026 15.9994C9.80056 15.9994 8.00356 14.2024 8.00356 12.0004C8.00356 9.79844 9.80056 8.00144 12.0026 8.00144C14.2046 8.00144 16.0016 9.79844 16.0016 12.0004C16.0016 14.2024 14.2046 15.9994 12.0026 15.9994ZM18.4076 4.16144C17.6126 4.16144 16.9706 4.80344 16.9706 5.59844C16.9706 6.39344 17.6126 7.03544 18.4076 7.03544C19.2026 7.03544 19.8446 6.39644 19.8446 5.59844C19.8448 5.40966 19.8078 5.22269 19.7357 5.04824C19.6635 4.87379 19.5577 4.71528 19.4242 4.5818C19.2907 4.44831 19.1322 4.34247 18.9578 4.27034C18.7833 4.19821 18.5963 4.1612 18.4076 4.16144ZM23.9966 12.0004C23.9966 10.3444 24.0116 8.70344 23.9186 7.05044C23.8256 5.13044 23.3876 3.42644 21.9836 2.02244C20.5766 0.615437 18.8756 0.180437 16.9556 0.0874372C15.2996 -0.00556279 13.6586 0.00943725 12.0056 0.00943725C10.3496 0.00943725 8.70856 -0.00556279 7.05556 0.0874372C5.13556 0.180437 3.43156 0.618437 2.02756 2.02244C0.620564 3.42944 0.185564 5.13044 0.0925642 7.05044C-0.000435834 8.70644 0.0145642 10.3474 0.0145642 12.0004C0.0145642 13.6534 -0.000435834 15.2974 0.0925642 16.9504C0.185564 18.8704 0.623564 20.5744 2.02756 21.9784C3.43456 23.3854 5.13556 23.8204 7.05556 23.9134C8.71156 24.0064 10.3526 23.9914 12.0056 23.9914C13.6616 23.9914 15.3026 24.0064 16.9556 23.9134C18.8756 23.8204 20.5796 23.3824 21.9836 21.9784C23.3906 20.5714 23.8256 18.8704 23.9186 16.9504C24.0146 15.2974 23.9966 13.6564 23.9966 12.0004ZM21.3566 19.0744C21.1376 19.6204 20.8736 20.0284 20.4506 20.4484C20.0276 20.8714 19.6226 21.1354 19.0766 21.3544C17.4986 21.9814 13.7516 21.8404 12.0026 21.8404C10.2536 21.8404 6.50356 21.9814 4.92556 21.3574C4.37956 21.1384 3.97156 20.8744 3.55156 20.4514C3.12856 20.0284 2.86456 19.6234 2.64556 19.0774C2.02156 17.4964 2.16256 13.7494 2.16256 12.0004C2.16256 10.2514 2.02156 6.50144 2.64556 4.92344C2.86456 4.37744 3.12856 3.96944 3.55156 3.54944C3.97456 3.12944 4.37956 2.86244 4.92556 2.64344C6.50356 2.01944 10.2536 2.16044 12.0026 2.16044C13.7516 2.16044 17.5016 2.01944 19.0796 2.64344C19.6256 2.86244 20.0336 3.12644 20.4536 3.54944C20.8766 3.97244 21.1406 4.37744 21.3596 4.92344C21.9836 6.50144 21.8426 10.2514 21.8426 12.0004C21.8426 13.7494 21.9836 17.4964 21.3566 19.0744Z" />
+        </symbol>
+        <symbol id="icon-twitter">
+          <path d="M24.0014 2.46548C23.1198 2.85141 22.1603 3.12917 21.1721 3.23735C22.1981 2.61879 22.9665 1.64156 23.333 0.489007C22.3702 1.07022 21.3155 1.47778 20.2156 1.6936C19.7559 1.19488 19.1999 0.797581 18.5823 0.526453C17.9646 0.255325 17.2986 0.116179 16.6257 0.117688C13.903 0.117688 11.7133 2.3573 11.7133 5.10564C11.7133 5.49158 11.7594 5.87752 11.8343 6.24884C7.75747 6.03248 4.12146 4.05601 1.70417 1.0299C1.26372 1.79335 1.0329 2.66261 1.03575 3.54727C1.03575 5.27814 1.90297 6.80435 3.22542 7.70195C2.44608 7.6708 1.68499 7.45342 1.00405 7.06749V7.12889C1.00405 9.5527 2.69241 11.5613 4.94259 12.0233C4.52009 12.1347 4.08547 12.1916 3.64895 12.1929C3.32914 12.1929 3.02662 12.1607 2.72122 12.1168C3.34355 14.0933 5.15579 15.5289 7.31378 15.5757C5.62542 16.9177 3.51066 17.7071 1.21438 17.7071C0.802374 17.7071 0.422061 17.6925 0.0273438 17.6457C2.20549 19.0637 4.78989 19.8824 7.57308 19.8824C16.6084 19.8824 21.5524 12.2864 21.5524 5.69332C21.5524 5.47696 21.5524 5.2606 21.538 5.04424C22.4946 4.33377 23.333 3.45371 24.0014 2.46548Z"/>
+        </symbol>
+        <symbol id="icon-youtube">
+          <path d="M23.9699 2.93179C23.8335 2.39882 23.5663 1.91289 23.1951 1.52261C22.824 1.13234 22.3619 0.851413 21.855 0.707956C19.9884 0.176758 12.4879 0.176758 12.4879 0.176758C12.4879 0.176758 4.98729 0.176758 3.12071 0.707956C2.61385 0.851413 2.15172 1.13234 1.78057 1.52261C1.40941 1.91289 1.14225 2.39882 1.00582 2.93179C0.657288 4.93347 0.488155 6.96513 0.500644 9.00005C0.488155 11.035 0.657288 13.0666 1.00582 15.0683C1.14225 15.6013 1.40941 16.0872 1.78057 16.4775C2.15172 16.8678 2.61385 17.1487 3.12071 17.2921C4.98729 17.8233 12.4879 17.8233 12.4879 17.8233C12.4879 17.8233 19.9884 17.8233 21.855 17.2921C22.3619 17.1487 22.824 16.8678 23.1951 16.4775C23.5663 16.0872 23.8335 15.6013 23.9699 15.0683C24.3184 13.0666 24.4876 11.035 24.4751 9.00005C24.4876 6.96513 24.3184 4.93347 23.9699 2.93179ZM10.0904 12.7815V5.21864L16.3152 9.00005L10.0904 12.7815Z"/>
+        </symbol>
+      </defs>
+    </svg>
+
+    <div class="hero">
+      <div class="container">
+        <div class="wrapper">
+          <header class="header">
+            <a class="logo-text">Sprivaten</a>
+            <nav class="navigation">
+              <ul class="navigation-list">
+                <li class="navigation-item">
+                  <a class="navigation-link" href="#">Home</a>
+                  <a class="navigation-link" href="#">Product</a>
+                  <a class="navigation-link" href="#">Pricing</a>
+                  <a class="navigation-link" href="#">Contact</a>
+                </li>
+              </ul>
+            </nav>
+
+            <button class="icon icon-search" type="button">
+              <svg class=""><use xlink:href="#icon-search"></use></svg>
+            </button>
+            <button class="icon icon-shoppingcard" type="button">
+              <svg class=""><use xlink:href="#icon-shoppingcard"></use></svg>
+            </button>
+            <button class="icon icon-menu-switch" type="button">
+              <svg class=""><use xlink:href="#icon-menu"></use></svg>
+            </button>
+          </header>
+
+          <section class="hero-section">
+            <div class="wrapper-left">
+              <h1 class="title">We Take Care of the Future</h1>
+              <span class="explanation">We know how large objects will act, but things on a small scale</span>
+              <div class="buttons">
+                <button class="button button-radius50" type="button">Get Quote Now</button>
+                <button class="button button-radius50-white" type="button">Learn More</button>
+              </div>
+            </div>
+            <div class="wrapper-right">
+              <div class="book-appointment-card">
+                <h3 class="card-title">Book Appointment</h3>
+                <div class="card-body">
+                  <div class="card-item">
+                    <label for="name">Name*</label>
+                    <input name="name" id="name" type="text" placeholder="Full Name" required />
+                  </div>
+                  <div class="card-item">
+                    <label for="email">Email*</label>
+                    <input name="email" id="email" type="email" placeholder="example@gmail.com" required />
+                  </div>
+                  <div class="card-item">
+                    <label for="department">Department*</label>
+                    <select name="department" id="department" >
+                      <option style="display: none;" value="" disabled selected>Please Select</option>
+                      <option value="1">Department</option>
+                    </select>
+                  </div>
+                  <div class="card-item">
+                    <label for="time">Time*</label>
+                    <select name="time" id="time">
+                      <option style="display: none;" value="" disabled selected>Please Select</option>
+                      <option value="1">04.00</option>
+                    </select>
+                  </div>
+                  <div class="card-item">
+                    <button class="button" type="button">Book Appointment</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <section class="choose">
+      <div class="container">
+        <div class="wrapper">
+          <h3 class="title">WHY CHOOSE US</h3>
+          <span class="explanation" >Problems trying to resolve the conflict between the two major realms of Classical physics: Newtonian mechanics </span>
+          <div class="cards-container">
+            <div class="card">
+              <div class="card-header">
+                <img class="card-img" src="assets/icon/web-development.svg" alt="">
+                <h4 class="card-title">Web Devolopment</h4>
+              </div>
+              <div class="card-body">
+                <span class="card-body-item">- The best products start with Figma</span>
+                <span class="card-body-item">- Design with real data</span>
+                <span class="card-body-item">- Lightning fast prototyping</span>
+                <span class="card-body-item">- Fastest way to organize</span>
+                <span class="card-body-item">- Work at the speed of thought.</span>
+                <span class="card-body-footer">Learn More</span>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">
+                <img class="card-img" src="assets/icon/national-firms.svg" alt="">
+                <h4 class="card-title">Business Growing</h4>
+              </div>
+              <div class="card-body">
+                <span class="card-body-item">- The best products start with Figma</span>
+                <span class="card-body-item">- Design with real data</span>
+                <span class="card-body-item">- Lightning fast prototyping</span>
+                <span class="card-body-item">- Fastest way to organize</span>
+                <span class="card-body-item">- Work at the speed of thought.</span>
+                <span class="card-body-footer">Learn More</span>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">
+                <img class="card-img" src="assets/icon/digital-marketing.svg" alt="">
+                <h4 class="card-title">Web Devolopment</h4>
+              </div>
+              <div class="card-body">
+                <span class="card-body-item">- The best products start with Figma</span>
+                <span class="card-body-item">- Design with real data</span>
+                <span class="card-body-item">- Lightning fast prototyping</span>
+                <span class="card-body-item">- Fastest way to organize</span>
+                <span class="card-body-item">- Work at the speed of thought.</span>
+                <span class="card-body-footer">Learn More</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="business-service">
+      <div class="container">
+        <div class="wrapper">
+          <h3 class="title"></h3>
+          <span class="explanation">Problems trying to resolve the conflict between the two major realms of Classical physics: Newtonian mechanics </span>
+        </div>
+      </div>
+      <div class="video">
+        <div class="container">
+          <div class="wrapper">
+            <div class="video-inner">
+              <video controls="controls" preload="metadata" poster="assets/img/video-bg.svg">
+                <source src="http://media.w3.org/2010/05/video/movie_300.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="what-clients-say">
+      <div class="container">
+        <div class="wrapper">
+          <h3 class="title">What Clients Say</h3>
+          <span class="explanation">Problems trying to resolve the conflict between the two major realms of Classical physics: Newtonian mechanics </span>
+          <div class="cards-container">
+            <div class="card">
+              <div class="card-header">
+                <svg class="icon-star-yellow"><use xlink:href="#icon-star"></use></svg>
+                <svg class="icon-star-yellow"><use xlink:href="#icon-star"></use></svg>
+                <svg class="icon-star-yellow"><use xlink:href="#icon-star"></use></svg>
+                <svg class="icon-star-yellow"><use xlink:href="#icon-star"></use></svg>
+                <svg class="icon-star-yellow icon-star-yellow-idle"><use xlink:href="#icon-star"></use></svg>
+              </div>
+              <p class="card-body-text">Slate helps you see how many more days you need to work to reach your financial goal.</p>
+              <div class="card-footer">
+                <img src="assets/img/regina-miles-1.svg" alt="profile-photo">
+                <div class="person">
+                  <span class="person-name">Regina Miles</span>
+                  <span class="person-job">Designer</span>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">
+                <svg class="icon-star-yellow"><use xlink:href="#icon-star"></use></svg>
+                <svg class="icon-star-yellow"><use xlink:href="#icon-star"></use></svg>
+                <svg class="icon-star-yellow"><use xlink:href="#icon-star"></use></svg>
+                <svg class="icon-star-yellow"><use xlink:href="#icon-star"></use></svg>
+                <svg class="icon-star-yellow icon-star-yellow-idle"><use xlink:href="#icon-star"></use></svg>
+              </div>
+              <p class="card-body-text">Slate helps you see how many more days you need to work to reach your financial goal.</p>
+              <div class="card-footer">
+                <img src="assets/img/regina-miles-2.svg" alt="profile-photo">
+                <div class="person">
+                  <span class="person-name">Regina Miles</span>
+                  <span class="person-job">Designer</span>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">
+                <svg class="icon-star-yellow"><use xlink:href="#icon-star"></use></svg>
+                <svg class="icon-star-yellow"><use xlink:href="#icon-star"></use></svg>
+                <svg class="icon-star-yellow"><use xlink:href="#icon-star"></use></svg>
+                <svg class="icon-star-yellow"><use xlink:href="#icon-star"></use></svg>
+                <svg class="icon-star-yellow icon-star-yellow-idle"><use xlink:href="#icon-star"></use></svg>
+              </div>
+              <p class="card-body-text">Slate helps you see how many more days you need to work to reach your financial goal.</p>
+              <div class="card-footer">
+                <img src="assets/img/regina-miles-3.svg" alt="profile-photo">
+                <div class="person">
+                  <span class="person-name">Regina Miles</span>
+                  <span class="person-job">Designer</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="our-team">
+      <div class="container">
+        <div class="wrapper">
+          <h3 class="title">Meet Our Team</h3>
+          <span class="explanation">Problems trying to resolve the conflict between the two major realms of Classical physics: Newtonian mechanics </span>
+          <div class="cards-container">
+            <div class="card">
+              <figure class="person-photo">
+                <picture>
+                  <img src="assets/img/avie-beaton.svg" alt="profile-photo">
+                </picture>
+              </figure>
+              <h4 class="person-name">Avie Beaton</h4>
+              <span class="job-description">CO Founder</span>
+              <div class="social-icons">
+                <button class="icon" type="button">
+                  <svg class="icon-facebook"><use xlink:href="#icon-facebook"></use></svg>
+                </button>
+                <button class="icon" type="button">
+                  <svg class="icon-instagram"><use xlink:href="#icon-instagram"></use></svg>
+                </button>
+                <button class="icon" type="button">
+                  <svg class="icon-twitter"><use xlink:href="#icon-twitter"></use></svg>
+                </button>
+              </div>
+            </div>
+            <div class="card">
+              <figure class="person-photo">
+                <picture>
+                  <img src="assets/img/ben-jonson.svg" alt="profile-photo">
+                </picture>
+              </figure>
+              <h4 class="person-name">Ben Jonson</h4>
+              <span class="job-description">Consultant</span>
+              <div class="social-icons">
+                <button class="icon" type="button">
+                  <svg class="icon-facebook"><use xlink:href="#icon-facebook"></use></svg>
+                </button>
+                <button class="icon" type="button">
+                  <svg class="icon-instagram"><use xlink:href="#icon-instagram"></use></svg>
+                </button>
+                <button class="icon" type="button">
+                  <svg class="icon-twitter"><use xlink:href="#icon-twitter"></use></svg>
+                </button>
+              </div>
+            </div>
+            <div class="card">
+              <figure class="person-photo">
+                <picture>
+                  <img src="assets/img/ashley-fletcher.svg" alt="profile-photo">
+                </picture>
+              </figure>
+              <h4 class="person-name">Ashley Fletcher</h4>
+              <span class="job-description">CEO</span>
+              <div class="social-icons">
+                <button class="icon" type="button">
+                  <svg class="icon-facebook"><use xlink:href="#icon-facebook"></use></svg>
+                </button>
+                <button class="icon" type="button">
+                  <svg class="icon-instagram"><use xlink:href="#icon-instagram"></use></svg>
+                </button>
+                <button class="icon" type="button">
+                  <svg class="icon-twitter"><use xlink:href="#icon-twitter"></use></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-us">
+      <div class="container">
+        <div class="wrapper">
+          <div class="wrapper-text">
+            <h3 class="title">Consulting Agency For Your Business</h3>
+            <span class="explanation">the quick fox jumps over the lazy dog</span>
+          </div>
+          <button class="button button-contact-us" type="button">Contact Us</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer">
+      <div class="container">
+        <div class="wrapper">
+          <div class="footer-top">
+            <h2 class="logo-text">Sprivaten</h2>
+            <div class="footer-social-icons">
+              <button class="icon" type="button">
+                <svg class="icon-facebook color-facebook"><use xlink:href="#icon-facebook"></use></svg>
+              </button>
+              <button class="icon" type="button">
+                <svg class="icon-instagram color-instagram"><use xlink:href="#icon-instagram"></use></svg>
+              </button>
+              <button class="icon" type="button">
+                <svg class="icon-twitter color-twitter"><use xlink:href="#icon-twitter"></use></svg>
+              </button>
+              <button class="icon" type="button">
+                <svg class="icon-youtube color-youtube"><use xlink:href="#icon-youtube"></use></svg>
+              </button>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <div class="column">
+              <h5 class="title">Company Info</h5>
+              <a href="#">About Us</a>
+              <a href="#">Carries</a>
+              <a href="#">We are hiring</a>
+              <a href="#">Blog</a>
+            </div>
+            <div class="column">
+              <h5 class="title">Legal</h5>
+              <a href="#">About Us</a>
+              <a href="#">Carries</a>
+              <a href="#">We are hiring</a>
+              <a href="#">Blog</a>
+            </div>
+            <div class="column">
+              <h5 class="title">Features</h5>
+              <a href="#">Business Marketing</a>
+              <a href="#">User Analytic</a>
+              <a href="#">Live Chat</a>
+              <a href="#">Unlimited Support</a>
+            </div>
+            <div class="column">
+              <h5 class="title">Resources</h5>
+              <a href="#">IOS & Android</a>
+              <a href="#">Watch a Demo</a>
+              <a href="#">Customers</a>
+              <a href="#">API</a>
+            </div>
+            <div class="column">
+              <h5 class="title">Company Info</h5>
+              <div class="footer-subscribe">
+                <input type="text">
+                <button class="button button-subscribe" type="button">Subscribe</button>
+              </div>
+              <small>Lorem impsum dolor amit</small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <div class="container">
+          <div class="wrapper">
+            <span class="copyright-text">Made With Love By Figmaland All Right Reserved </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

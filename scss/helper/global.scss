@@ -1,0 +1,81 @@
+body {
+  font-family: $font-family;
+  font-size: $font-size;
+  min-width: 375px;
+}
+
+.container {
+  max-width: 1050px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+
+  .wrapper {
+    height: 100%;
+    margin-left: $margin-width;
+    margin-right: $margin-width;
+  }
+}
+
+.button {
+  cursor: pointer;
+  background-color: $color-sunshade;
+  border-radius: 5px;
+  color: white;
+  height: 58px;
+  font-size: 16px;
+  font-weight: $fw700;
+  width: fit-content;
+  padding: 10px 36px;
+  transition: 0.15s;
+
+  &:hover {
+    background-color: #ff9500;
+    transition: 0.15s;
+  }
+
+  &-radius50 {
+    border-radius: 50px;
+  }
+  &-radius50-white {
+    border-radius: 50px;
+    background-color: transparent;
+    border: 1px solid white;
+  }
+}
+
+.icon {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: inherit;
+  height: 42px;
+  width: 42px;
+  fill: white;
+
+  @include mq('desktop') {
+    &:hover {
+      transition: 0.15s;
+      fill: $color-sunshade;
+    }
+  }
+
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.color-facebook {
+  fill: #335bf5;
+}
+.color-instagram {
+  fill: #e61f5a;
+}
+.color-twitter {
+  fill: #21a6df;
+}
+.color-youtube {
+  fill: #e42f08;
+}
